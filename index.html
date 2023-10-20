@@ -4,12 +4,20 @@
     <meta charset="UTF-8" />
     <title>Karl Harper - My profile and experience</title>
     <link type="text/css" rel="stylesheet" href="src/styles.css" />
+    <script src="https://kit.fontawesome.com/20da122d68.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header class="hero flex-justify-center">
-      <p>Hello, world!</p>
-      <h1>I am Karl Harper</h1>
-      <p>Web Developer | UX designer</p>
+      <p style="color: #fff;">Hello, world!</p>
+      <h1>I am <span>Karl Harper</span></h1>
+      <!-- <p>Web Developer | UX designer</p> -->
+      <div class="wrapper">
+        <ul class="dynamic-txt">
+          <li><span>Web Developer</span></li>
+          <li><span>Front-end Developer</span></li>
+          <li><span>Web Designer</span></li>
+        </ul>
+      </div>
       <a href="#contact">Get in touch</a>
     </header>
 
@@ -30,7 +38,7 @@
           </p>
 
           <h3>Languages I know</h3>
-          <p>HTML, CSS , JavaScript</p>
+          <p>HTML, CSS, JavaScript</p>
 
           <h3>Dev Tools I use</h3>
           <ul>
@@ -47,7 +55,7 @@
           </p>
 
           <h3>My design Expertise</h3>
-          <p>UI/UX, User Research , User Feedback</p>
+          <p>UI/UX, User Research, User Feedback</p>
 
           <h3>Design Tools I use</h3>
           <ul>
@@ -125,7 +133,7 @@
       </div>
     </section>
 
-    <section class="contact" id="contact">
+    <section class="contact flex-justify-center flex-align-items-center" id="contact">
       <h2 class="section-title">Wanna Connect!</h2>
       <div class="contact-card">
         <div class="article-container">
@@ -139,9 +147,10 @@
           </article>
         </div>
         <ul>
-          <li><a href="https://instagram.com/example">Instagram</a></li>
-          <li><a href="https://twitter.com/example">Twitter</a></li>
-          <li><a href="https://linkedin.com/in/example">LinkedIn</a></li>
+          <li><a href="https://instagram.com/example"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://twitter.com/example"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+          <li><a href="https://linkedin.com/in/example"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://github.com/example"><i class="fa-brands fa-github"></i> Github</a></li>
         </ul>
       </div>
     </section>

@@ -14,7 +14,7 @@ section {
 }
 
 section:nth-child(2n) {
-  background-color: #ededed;
+  background-color: var(--backgroung-color-light);/*#ededed;*/
 }
 
 section {
@@ -66,4 +66,281 @@ section.crafts img {
 
 .contact ul > li {
   display: inline-block;
+}
+
+
+/* ------------------------------------------------------------------Adding My Styles------------------------------------------------------------------ */
+/* font-family: 'Roboto Mono', monospace; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;700&display=swap');
+/* font-family: 'Alumni Sans Collegiate One', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&display=swap');
+/* font-family: 'Playpen Sans', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500;700&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;  
+  font-family: var(--body-font-family);
+  font-size: 1.15rem;
+  background: var(--background-color);
+  color: var(--text-secondary-color);
+}
+
+:root {
+  font-size: 16px;
+  --backgroung-color-light: #fff;
+  --background-color: #000;
+  --primary-color: #7c3ca1;
+  --primary-color-light: #9752be;
+  --text-primary-color: #fff;
+  --text-secondary-color: #7c7c7c;
+  --headings-font-family: 'Playpen Sans', cursive;
+  --body-font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headings-font-family);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+h3 {
+  font-size: 2rem;
+  color: var(--primary-color-light);
+  font-weight: 500;
+}
+
+/* -----------------------------------------HEADER SECTION------------------------------------ */
+.hero h1 span {
+  font-size: 4rem;
+  font-family: 'Alumni Sans Collegiate One', sans-serif;
+  color: var(--primary-color);
+}
+
+
+
+/*START-Typing Effect*/
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.wrapper .dynamic-txt {
+  margin-left: 15px;
+  line-height: 5.625rem;
+  height: 5.625rem;
+  overflow: hidden;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 2.25rem;
+  font-weight: 1000;
+  color: var(--text-primary-color);
+}
+
+.dynamic-txt li {
+  list-style: none;
+  position: relative;
+  top: 0;
+  font-size: 3.75rem;
+  font-weight: 500;
+  animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+
+.dynamic-txt li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 5.625rem;
+}
+
+.dynamic-txt li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background: var(--background-color);
+  border-left: 5px solid var(--primary-color);
+  animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+  100%{
+    left: 0;
+  }
+  40%, 60% {
+    left: calc(100% + 30px);
+  }
+}
+/*END-Typing Effect*/
+
+.hero a {
+  text-decoration: none;
+  border: 3px solid var(--background-color-dark);
+  border-radius: 50px 25px 50px 25px;
+  background: var(--primary-color);
+  color: var(--text-primary-color);
+  width: 12rem;
+  height: auto;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  transition: transform 0.5s ease-out;
+}
+
+.hero a:hover {
+  transform: scale(1.15);
+}
+
+
+/* -----------------------------------------ABOUT SECTION------------------------------------ */
+.about h2 {
+  color: var(--primary-color);
+}
+
+.about p {
+  text-align: center;
+  width: 50rem;
+  margin-top: 0;
+  line-height: 2rem;
+  text-wrap: wrap;
+}
+
+.about ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0;
+}
+.about ul li {
+  list-style: none;
+  padding-bottom: 0.25rem;
+}
+
+.about ul li::before {
+  content: "\2022";
+  color: var(--primary-color);
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 0.80rem;
+  text-align: left;
+}
+
+
+/* -----------------------------------------CRAFT SECTION------------------------------------ */
+.crafts p {
+  margin-top: 0;
+  padding-top: 0;
+  margin-block-start: 0.5rem;
+  margin-block-end: 0.5rem;
+}
+
+.crafts h3 {
+  margin-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.crafts h2{
+  margin-block-end: 0.5rem;
+}
+
+.crafts ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0;
+}
+.crafts ul li {
+  list-style: none;
+  padding-bottom: 0.25rem;
+}
+.crafts ul li::before {
+  content: "\2022";
+  color: var(--primary-color);
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 0.80rem;
+  text-align: left;
+}
+
+
+/* -----------------------------------------EXPERIENCE SECTION------------------------------------ */
+
+
+
+/* -----------------------------------------CONTACT SECTION------------------------------------ */
+.contact-card {
+  width: 100%;
+  text-align: center;
+}
+
+.contact-card h3 {
+  margin-block-end: 0;
+}
+
+.contact-card article a {
+  margin-top: 10rem;
+  padding: 0.15rem;
+  text-decoration: none;
+  border-radius: 2rem;
+  color: var(--text-secondary-color);
+  transition: transform 0.5s, color 0.5s, border 0.1s;
+}
+
+.contact-card article a:hover {
+  transform: scale(1.5);
+  color: var(--text-primary-color);
+  border: 2px solid var(--primary-color-light);
+}
+
+.contact-card ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+}
+
+.contact-card ul li {
+  padding: 2rem;
+}
+
+.contact-card ul li a {
+  text-decoration: none;
+  color: var(--text-primary-color);
+  transition: scale 0.5s color 0.5s, border 0.1s;
+}
+
+.contact-card ul li a:hover {
+  scale: 1.5;
+  color: var(--primary-color-light);
+  border-bottom: 2px solid var(--text-primary-color);
+  font-weight: bold;
+}
+
+
+
+/* -----------------------------------------FOOTER SECTION------------------------------------ */
+footer p{
+ margin-block-end: 0;
 }
